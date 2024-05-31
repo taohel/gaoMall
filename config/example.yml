@@ -1,0 +1,47 @@
+app:
+  name: "gaoMall"
+  version: "0.0.1"
+  addr: "0.0.0.0:37655"
+  code: "121234"
+
+panelApp:
+  name: "gaoMallPanel"
+  version: "0.0.1"
+  addr: "0.0.0.0:37656"
+
+pgsql:
+  default:
+    log:
+      enable: true
+      level: "debug"
+      path: "logs/gorm.log"
+    write:
+      host: "localhost"
+      port: "5432"
+      database: ""
+      username: ""
+      password: ""
+    read:
+      host: "localhost"
+      port: "5432"
+      database: ""
+      username: ""
+      password: ""
+
+redis:
+  default:
+    write:
+      addr: "127.0.0.1:6379"
+      password: ""
+      db: 0
+    read:
+      addr: "127.0.0.1:6379"
+      password: ""
+      db: 0
+
+sms:
+  enable: false
+
+token:
+  duration: "2h"
+  symmetricKey: "1234567890QaWsEdRfTgYhUjIkOlP"
