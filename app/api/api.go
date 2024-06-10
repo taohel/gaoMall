@@ -13,12 +13,11 @@ func NewServer() {
 	if err != nil {
 		panic(err)
 	}
+
 	r := gin.Default()
 	r.Use(middleware.Cors())
-
 	r.Static("/public", "static/public")
 	r.Static("/uploads", "static/uploads")
-
 	routes.RegisterRoute(r)
 	err = r.Run(app.Config.App.Addr)
 	if err != nil {
